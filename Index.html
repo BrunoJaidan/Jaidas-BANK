@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaidas BANK</title>
+    <link
+      rel="shortcut icon"
+      type="img/png"
+      href="img/LogoJaidasCOMFUNDO.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-login">
+        <div class="wrap-login">
+          <form action="" class="login-form">
+            <span class="login-form-title"> Faça seu Login </span>
+
+            <div class="wrap-input margin-top-35 margin-bottom-35">
+              <input
+                id="usuario"
+                class="input-form"
+                type="text"
+                name="email"
+                autocomplete="off"
+              />
+              <span class="focus-input-form" data-placeholder="Usuário"></span>
+            </div>
+
+            <div class="wrap-input margin-bottom-35">
+              <input
+                id="senha"
+                class="input-form"
+                type="password"
+                name="password"
+              />
+              <span class="focus-input-form" data-placeholder="Senha"></span>
+            </div>
+
+            <div class="container-login-form-btn">
+              <button
+                onclick="login()"
+                id="buttonSubmit"
+                type="submit"
+                class="login-form-btn"
+              >
+                Login
+              </button>
+            </div>
+
+            <ul class="login-utils">
+              <li>
+                <span class="text1"> Não tem conta? </span>
+
+                <a href="#" class="text2"> Criar </a>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <img
+          src="img/logoJaidas.png"
+          width="450"
+          height="450"
+          class="margin-left-50"
+        />
+      </div>
+    </div>
+
+    <script>
+      let inputs = document.getElementsByClassName("input-form");
+      for (let input of inputs) {
+        input.addEventListener("blur", function () {
+          if (input.value.trim() != "") {
+            input.classList.add("has-val");
+          } else {
+            input.classList.remove("has-val");
+          }
+        });
+      }
+    </script>
+    <script src="JavaScript/Java.js"></script>
+  </body>
+</html>
